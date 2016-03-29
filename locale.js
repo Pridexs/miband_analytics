@@ -8,29 +8,29 @@ if (lang=="") {
 	lang = "en_EN";
 }
 
-var Tdate='Date\xA0\xA0\xA0\xA0\xA0\xA0';
-var Tyear='Year';
-var Tyearmonth='Year-month';
-var Tmonth='Month';
+var Tdate ='Date\xA0\xA0\xA0\xA0\xA0\xA0';
+var Tyear ='Year';
+var Tyearmonth ='Year-month';
+var Tmonth ='Month';
 var Tyearweek = 'Year-week';
 var Tweek = 'week';
-var Tdayofweek ='Day Of Week';
-var Tday ='Day';
-var TInBedMin ='Total Sleep, mins';
-var TDeepSleepMin ='Deep\xA0Sleep, mins';
-var TLightSleepMin ='Light\xA0Sleep, mins';
-var TAwakeMin ='Awake, mins';
-var TDailyDistanceMeter ='Daily distance, meters';
-var TDailySteps ='Daily steps';
-var TDailyBurnCalories ='Daily calories burned';
-var TWalkDistance ='Walk distance, meters';
+var Tdayofweek = 'Day Of Week';
+var Tday = 'Day';
+var TInBedMin = 'Total Sleep, mins';
+var TDeepSleepMin = 'Deep\xA0Sleep, mins';
+var TLightSleepMin = 'Light\xA0Sleep, mins';
+var TAwakeMin = 'Awake, mins';
+var TDailyDistanceMeter = 'Daily distance, meters';
+var TDailySteps = 'Daily steps';
+var TDailyBurnCalories = 'Daily calories burned';
+var TWalkDistance = 'Walk distance, meters';
 var TWalkTimeMin = 'Walk time, minutes';
-var TWalkBurnCalories ='Walk calories burned';
-var TRunDistanceMeter ='Run distance, meters';
-var TRunTimeMin ='Run time, minutes';
-var TRunBurnCalories ='Run calories burned';
-var TSleepStartOffset ='SleepStartOffset';
-var TSleepEndOffset ='SleepEndOffset';
+var TWalkBurnCalories = 'Walk calories burned';
+var TRunDistanceMeter = 'Run distance, meters';
+var TRunTimeMin = 'Run time, minutes';
+var TRunBurnCalories = 'Run calories burned';
+var TSleepStartOffset = 'SleepStartOffset';
+var TSleepEndOffset = 'SleepEndOffset';
 
 var TSleep = 'Sleep';
 var TActivity = 'Daily Activity';
@@ -61,6 +61,9 @@ var TDL = 'SMTWTFS';
 
 var TASleepTime = 'Fall asleep, HH';
 var TAwakeTime = 'Wake up, HH';
+
+var TSleepGoal = 'Sleep Goal, minutes';
+var TActivityGoal = 'Activity Goal, steps';
 
 if (lang == "ru_RU") {
 	var Tdate = 'число\xA0\xA0\xA0\xA0\xA0\xA0';
@@ -274,29 +277,29 @@ if (lang == "ru_RU") {
 
 	var TDL = 'SMDMDFS';
 } else if (lang == "pt_BR") {
-	var Tdate='Data\xA0\xA0\xA0\xA0\xA0\xA0';
-	var Tyear='Ano';
-	var Tyearmonth='Ano-mês';
-	var Tmonth='Mês';
+	var Tdate= 'Data\xA0\xA0\xA0\xA0\xA0\xA0';
+	var Tyear= 'Ano';
+	var Tyearmonth= 'Ano-mês';
+	var Tmonth= 'Mês';
 	var Tyearweek = 'Ano-semana';
 	var Tweek = 'Semana';
-	var Tdayofweek ='Dia da semana';
-	var Tday ='Dia';
-	var TInBedMin ='Total dormido, mins';
-	var TDeepSleepMin ='Sono\xA0Profundo, mins';
-	var TLightSleepMin ='Sono\xA0Leve, mins';
-	var TAwakeMin ='Acordado, mins';
-	var TDailyDistanceMeter ='Distância diária, meters';
-	var TDailySteps ='Passos diários';
-	var TDailyBurnCalories ='Calorias queimadas diárias';
-	var TWalkDistance ='Distância andada, metros';
+	var Tdayofweek = 'Dia da semana';
+	var Tday = 'Dia';
+	var TInBedMin = 'Total dormido, mins';
+	var TDeepSleepMin = 'Sono\xA0Profundo, mins';
+	var TLightSleepMin = 'Sono\xA0Leve, mins';
+	var TAwakeMin = 'Acordado, mins';
+	var TDailyDistanceMeter = 'Distância diária, meters';
+	var TDailySteps = 'Passos diários';
+	var TDailyBurnCalories = 'Calorias queimadas diárias';
+	var TWalkDistance = 'Distância andada, metros';
 	var TWalkTimeMin = 'Tempo andado, minutos';
-	var TWalkBurnCalories ='Calorias queimadas andando';
-	var TRunDistanceMeter ='Distância correndo, metros';
-	var TRunTimeMin ='Tempo correndo, minutos';
-	var TRunBurnCalories ='Calorias queimadas correndo';
-	var TSleepStartOffset ='SleepStartOffset';
-	var TSleepEndOffset ='SleepEndOffset';
+	var TWalkBurnCalories = 'Calorias queimadas andando';
+	var TRunDistanceMeter = 'Distância correndo, metros';
+	var TRunTimeMin = 'Tempo correndo, minutos';
+	var TRunBurnCalories = 'Calorias queimadas correndo';
+	var TSleepStartOffset = 'SleepStartOffset';
+	var TSleepEndOffset = 'SleepEndOffset';
 
 	var TSleep = 'Sono';
 	var TActivity = 'Atividade diária';
@@ -327,6 +330,9 @@ if (lang == "ru_RU") {
 
 	var TASleepTime = 'Dormiu, HH';
 	var TAwakeTime = 'Acordou, HH';
+
+	var TSleepGoal = 'Meta de sono, minutos';
+	var TActivityGoal = 'Meta de atividade, passos';
 }
 
 var data = new google.visualization.DataTable();

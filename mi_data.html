@@ -4,11 +4,11 @@
   <head>
 	<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart','table','controls']}]}"></script>
 
-	<script type="text/javascript" src="config.js"></script> 
+	<script type="text/javascript" src="config.js"></script>
 	<script type="text/javascript" src="app_locale.js"></script>
-	<script type="text/javascript" src="locale.js"></script> 
-	<script type="text/javascript" src="extract.js"></script> 
-	<script type="text/javascript">google.setOnLoadCallback(a);var b,c,d=data.getNumberOfRows(),e=data.getNumberOfColumns(),AggType=1,g,k,l;data.addColumn("number","Sleep Goal, minutes");data.addColumn("number","Activity Goal, steps");data.addColumn("string",TInBedMin);data.addColumn("string",TDeepSleepMin);data.addColumn("string",TLightSleepMin);data.addColumn("string",TAwakeMin);function m(h){var K;h+="";return 2<=h.length?h:Array(2-h.length+1).join(K||"0")+h}
+	<script type="text/javascript" src="locale.js"></script>
+	<script type="text/javascript" src="extract.js"></script>
+	<script type="text/javascript">google.setOnLoadCallback(a);var b,c,d=data.getNumberOfRows(),e=data.getNumberOfColumns(),AggType=1,g,k,l;data.addColumn("number",TSleepGoal);data.addColumn("number",TActivityGoal);data.addColumn("string",TInBedMin);data.addColumn("string",TDeepSleepMin);data.addColumn("string",TLightSleepMin);data.addColumn("string",TAwakeMin);function m(h){var K;h+="";return 2<=h.length?h:Array(2-h.length+1).join(K||"0")+h}
 for(var n=0;n<d;n++)data.setCell(n,e,60*SleepGoal),data.setCell(n,e+1,WalkGoal),g=Math.floor(data.getFormattedValue(n,8)/60),k=data.getFormattedValue(n,8)%60,data.setCell(n,e+2,m(g.toString())+":"+m(k.toString())),g=Math.floor(data.getFormattedValue(n,9)/60),k=data.getFormattedValue(n,9)%60,0!=data.getFormattedValue(n,8)?(l=Math.round(100*data.getFormattedValue(n,9)/data.getFormattedValue(n,8)),data.setCell(n,e+3,m(g.toString())+":"+m(k.toString())+" ("+l.toString()+"%)")):data.setCell(n,e+3,m(g.toString())+
 ":"+m(k.toString())),g=Math.floor(data.getFormattedValue(n,10)/60),k=data.getFormattedValue(n,10)%60,0!=data.getFormattedValue(n,8)?(l=Math.round(100*data.getFormattedValue(n,10)/data.getFormattedValue(n,8)),data.setCell(n,e+4,m(g.toString())+":"+m(k.toString())+" ("+l.toString()+"%)")):data.setCell(n,e+4,m(g.toString())+":"+m(k.toString())),g=Math.floor(data.getFormattedValue(n,11)/60),k=data.getFormattedValue(n,11)%60,data.setCell(n,e+5,m(g.toString())+":"+m(k.toString()));var p,q,r,t,u,w=new google.visualization.DataView(data);
 w.setColumns([0,5,6,8,9,10,11,12,13,14,15,16,17,18,19,20,e,e+1,e+2,e+3,e+4,e+5]);
@@ -31,9 +31,9 @@ function J(){document.getElementById("SleepGoal").innerHTML=SleepGoal;document.g
 for(h=0;h<C;h++)B.setCell(h,D-1,WalkGoal);u=new google.visualization.ArrowFormat({base:WalkGoal});u.format(data,13);u.format(y,8);u.format(B,8);c=WalkGoal}1==AggType?(p.draw(F,H),q.draw(G,I),r.draw(E,{showRowNumber:!0,sortColumn:0,sortAscending:!1})):2==AggType?(p.draw(viewSleepW,H),q.draw(viewWalkW,I),r.draw(viewTableW,{showRowNumber:!0,sortColumn:0,sortAscending:!1})):(p.draw(viewSleepM,H),q.draw(viewWalkM,I),r.draw(viewTableM,{showRowNumber:!0,sortColumn:0,sortAscending:!1}))}window.RD=J;
 function a(){p=new google.visualization.ComboChart(document.getElementById("chart1_div"));q=new google.visualization.LineChart(document.getElementById("chart2_div"));r=new google.visualization.Table(document.getElementById("table_div"));J();google.visualization.events.addListener(r,"select",function(){p.setSelection(r.getSelection());q.setSelection(r.getSelection())});google.visualization.events.addListener(p,"select",function(){r.setSelection(p.getSelection());q.setSelection(p.getSelection())});
 google.visualization.events.addListener(q,"select",function(){r.setSelection(q.getSelection());p.setSelection(q.getSelection())});document.getElementById("Goals").innerHTML=TDailyGoals;document.getElementById("SleepGoals").innerHTML=TGoalSleep;document.getElementById("StepGoals").innerHTML=TGoalSteps;document.getElementById("AggregateBy").innerHTML=TAggregate;document.getElementById("ByDay").value=TAggregateDay;document.getElementById("ByWeek").value=TAggregateWeek;document.getElementById("ByMonth").value=
-TAggregateMonth}window.SGD=function(){1<SleepGoal&&(--SleepGoal,J())};window.SGI=function(){24>SleepGoal&&(SleepGoal+=1,J())};window.WGD=function(){1E3<WalkGoal&&(WalkGoal-=1E3,J())};window.WGI=function(){24E3>WalkGoal&&(WalkGoal+=1E3,J())};</script> 
+TAggregateMonth}window.SGD=function(){1<SleepGoal&&(--SleepGoal,J())};window.SGI=function(){24>SleepGoal&&(SleepGoal+=1,J())};window.WGD=function(){1E3<WalkGoal&&(WalkGoal-=1E3,J())};window.WGI=function(){24E3>WalkGoal&&(WalkGoal+=1E3,J())};</script>
   </head>
-  
+
   <body>
     <table style="width: 99%;" >
       <tr valign="top" style="height: 350px;" >
@@ -58,9 +58,9 @@ TAggregateMonth}window.SGD=function(){1<SleepGoal&&(--SleepGoal,J())};window.SGI
     		<input type="button" value="+" onclick="WGI();"/>
     	</span>
 
-    	<label id="AggregateBy"> </label> 
+    	<label id="AggregateBy"> </label>
 	<input type="button" id="ByDay" value="day" onclick="AggType = 1; RD();"/>
-    	<input type="button" id="ByWeek" value="week" onclick="AggType = 2; RD();"/>   
+    	<input type="button" id="ByWeek" value="week" onclick="AggType = 2; RD();"/>
     	<input type="button" id="ByMonth" value="month" onclick="AggType = 3; RD();"/>
     </form>
     <div id="table_div" style="align: center; "></div>
