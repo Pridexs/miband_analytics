@@ -62,231 +62,272 @@ var TDL = 'SMTWTFS';
 var TASleepTime = 'Fall asleep, HH';
 var TAwakeTime = 'Wake up, HH';
 
-
 if (lang == "ru_RU") {
-var Tdate = 'число\xA0\xA0\xA0\xA0\xA0\xA0';
-var Tyear = 'Year';
-var Tyearmonth = 'Year-month';
-var Tmonth ='Month';
-var Tyearweek ='Year-week';
-var Tweek = 'Неделя';
-var Tdayofweek ='День недели';
-var Tday ='Day';
-var TInBedMin ='общий сон, минут';
-var TDeepSleepMin ='глубокий\xA0сон, минут';
-var TLightSleepMin ='легкий\xA0сон, минут';
-var TAwakeMin ='без сна, минут';
-var TDailyDistanceMeter ='Общая дистанция, метров';
-var TDailySteps ='Всего шагов';
-var TDailyBurnCalories ='Сожжено калорий';
-var TWalkDistance = 'ходьба, метров';
-var TWalkTimeMin = 'ходьба, минут';
-var TWalkBurnCalories = 'ходьба, калорий';
-var TRunDistanceMeter = 'бег, метров';
-var TRunTimeMin = 'бег, минут';
-var TRunBurnCalories = 'бег, калорий';
-var TSleepStartOffset = 'SleepStartOffset';
-var TSleepEndOffset = 'SleepEndOffset';
+	var Tdate = 'число\xA0\xA0\xA0\xA0\xA0\xA0';
+	var Tyear = 'Year';
+	var Tyearmonth = 'Year-month';
+	var Tmonth ='Month';
+	var Tyearweek ='Year-week';
+	var Tweek = 'Неделя';
+	var Tdayofweek ='День недели';
+	var Tday ='Day';
+	var TInBedMin ='общий сон, минут';
+	var TDeepSleepMin ='глубокий\xA0сон, минут';
+	var TLightSleepMin ='легкий\xA0сон, минут';
+	var TAwakeMin ='без сна, минут';
+	var TDailyDistanceMeter ='Общая дистанция, метров';
+	var TDailySteps ='Всего шагов';
+	var TDailyBurnCalories ='Сожжено калорий';
+	var TWalkDistance = 'ходьба, метров';
+	var TWalkTimeMin = 'ходьба, минут';
+	var TWalkBurnCalories = 'ходьба, калорий';
+	var TRunDistanceMeter = 'бег, метров';
+	var TRunTimeMin = 'бег, минут';
+	var TRunBurnCalories = 'бег, калорий';
+	var TSleepStartOffset = 'SleepStartOffset';
+	var TSleepEndOffset = 'SleepEndOffset';
 
-var TSleep = 'Сон';
-var TActivity = 'Дневная активность';
-var TDistanceSumM = 'Дистанция за месяц, метров';
-var TDistanceSumW = 'Дистанция за неделю, метров';
-var TDistanceAvg = 'Средняя дневная дистанция, метров';
-var TStepsSumM = 'Всего шагов за неделю';
-var TStepsSumW = 'Всего шагов за неделю';
-var TStepsAvg = 'Среднее дневное число шагов';
-var TDailyGoals = 'Дневная норма';
-var TGoalSleep = 'Сон';
-var TGoalSteps = 'Шагов';
+	var TSleep = 'Сон';
+	var TActivity = 'Дневная активность';
+	var TDistanceSumM = 'Дистанция за месяц, метров';
+	var TDistanceSumW = 'Дистанция за неделю, метров';
+	var TDistanceAvg = 'Средняя дневная дистанция, метров';
+	var TStepsSumM = 'Всего шагов за неделю';
+	var TStepsSumW = 'Всего шагов за неделю';
+	var TStepsAvg = 'Среднее дневное число шагов';
+	var TDailyGoals = 'Дневная норма';
+	var TGoalSleep = 'Сон';
+	var TGoalSteps = 'Шагов';
 
-var TAggregate = 'Усреднять данные за';
-var TAggregateDay = 'день';
-var TAggregateWeek = 'неделю';
-var TAggregateMonth = 'месяц';
+	var TAggregate = 'Усреднять данные за';
+	var TAggregateDay = 'день';
+	var TAggregateWeek = 'неделю';
+	var TAggregateMonth = 'месяц';
 
-var TD0 = 'Воскресенье';
-var TD1 = 'Понедельник';
-var TD2 = 'Вторник';
-var TD3 = 'Среда';
-var TD4 = 'Четверг';
-var TD5 = 'Пятница';
-var TD6 = 'Суббота';
+	var TD0 = 'Воскресенье';
+	var TD1 = 'Понедельник';
+	var TD2 = 'Вторник';
+	var TD3 = 'Среда';
+	var TD4 = 'Четверг';
+	var TD5 = 'Пятница';
+	var TD6 = 'Суббота';
 
-var TDL = 'ВПВСЧПС';
+	var TDL = 'ВПВСЧПС';
 
-var TASleepTime = 'Засыпание, ЧЧ';
-var TAwakeTime = 'Пробуждение, ЧЧ';
+	var TASleepTime = 'Засыпание, ЧЧ';
+	var TAwakeTime = 'Пробуждение, ЧЧ';
+} else if (lang == "fr_FR") {
+	var Tdate = 'Date\xA0\xA0\xA0\xA0\xA0\xA0';
+	var Tyear = 'Année';
+	var Tyearmonth = 'Année-Mois';
+	var Tmonth = 'Mois';
+	var Tyearweek = 'Année-Semaine';
+	var Tweek = 'Semaine';
+	var Tdayofweek = 'Jour de la semaine';
+	var Tday = 'Jour';
+	var TInBedMin = 'Total Sommeil, mins';
+	var TDeepSleepMin = 'Sommeil\xA0\xA0 Profond, mins';
+	var TLightSleepMin ='Sommeil\xA0\xA0 Léger, mins';
+	var TAwakeMin = 'Réveillé, mins';
+	var TDailyDistanceMeter = 'Distance journalière mètres';
+	var TDailySteps = 'Pas quotidien';
+	var TDailyBurnCalories = 'Cal. brulées ce jour';
+	var TWalkDistance = 'Distance de marche, metres';
+	var TWalkTimeMin = 'Temps de marche, minutes';
+	var TWalkBurnCalories = 'Cal. brulées en marchant';
+	var TRunDistanceMeter = 'Distance en courant, meters';
+	var TRunTimeMin = 'Temps à courir, minutes';
+	var TRunBurnCalories = 'Cal. brulées en courant';
+	var TSleepStartOffset = 'SleepStartOffset';
+	var TSleepEndOffset = 'SleepEndOffset';
 
-} 
+	var TSleep = 'Sommeil';
+	var TActivity = 'Activité quotidienne';
+	var TDistanceSumM = 'Distance totale mensuelle';
+	var TDistanceSumW = 'Distance totale hebdomadaire';
+	var TDistanceAvg = 'Distance moyenne quotidienne, mètres';
+	var TStepsSumM = 'Total pas mensuel';
+	var TStepsSumW = 'Total pas hebdomadaire';
+	var TStepsAvg = 'Moyenne de pas quotidienne';
+	var TDailyGoals = 'Objectifs quotidiens';
+	var TGoalSleep = 'Sommeil';
+	var TGoalSteps = 'Pas';
 
-else if (lang == "fr_FR") {
-var Tdate = 'Date\xA0\xA0\xA0\xA0\xA0\xA0';
-var Tyear = 'Année';
-var Tyearmonth = 'Année-Mois';
-var Tmonth = 'Mois';
-var Tyearweek = 'Année-Semaine';
-var Tweek = 'Semaine';
-var Tdayofweek = 'Jour de la semaine';
-var Tday = 'Jour';
-var TInBedMin = 'Total Sommeil, mins';
-var TDeepSleepMin = 'Sommeil\xA0\xA0 Profond, mins';
-var TLightSleepMin ='Sommeil\xA0\xA0 Léger, mins';
-var TAwakeMin = 'Réveillé, mins';
-var TDailyDistanceMeter = 'Distance journalière mètres';
-var TDailySteps = 'Pas quotidien';
-var TDailyBurnCalories = 'Cal. brulées ce jour';
-var TWalkDistance = 'Distance de marche, metres';
-var TWalkTimeMin = 'Temps de marche, minutes';
-var TWalkBurnCalories = 'Cal. brulées en marchant';
-var TRunDistanceMeter = 'Distance en courant, meters';
-var TRunTimeMin = 'Temps à courir, minutes';
-var TRunBurnCalories = 'Cal. brulées en courant';
-var TSleepStartOffset = 'SleepStartOffset';
-var TSleepEndOffset = 'SleepEndOffset';
+	var TAggregate = 'Regrouper données par';
+	var TAggregateDay = 'jour';
+	var TAggregateWeek = 'semaine';
+	var TAggregateMonth = 'mois';
 
-var TSleep = 'Sommeil';
-var TActivity = 'Activité quotidienne';
-var TDistanceSumM = 'Distance totale mensuelle';
-var TDistanceSumW = 'Distance totale hebdomadaire';
-var TDistanceAvg = 'Distance moyenne quotidienne, mètres';
-var TStepsSumM = 'Total pas mensuel';
-var TStepsSumW = 'Total pas hebdomadaire';
-var TStepsAvg = 'Moyenne de pas quotidienne';
-var TDailyGoals = 'Objectifs quotidiens';
-var TGoalSleep = 'Sommeil';
-var TGoalSteps = 'Pas'; 
+	var TD0 = 'dimanche';
+	var TD1 = 'lundi';
+	var TD2 = 'mardi';
+	var TD3 = 'mercredi';
+	var TD4 = 'jeudi';
+	var TD5 = 'vendredi';
+	var TD6 = 'samedi';
 
-var TAggregate = 'Regrouper données par';
-var TAggregateDay = 'jour';
-var TAggregateWeek = 'semaine';
-var TAggregateMonth = 'mois'; 
+	var TDL = 'SLMMJVS';
+} else if (lang == "es_ES") {
+	var Tdate='Fecha\xA0\xA0\xA0\xA0\xA0';
+	var Tyear='Año';
+	var Tyearmonth='Año-Mes';
+	var Tmonth='Mes';
+	var Tyearweek = 'Año-Semana';
+	var Tweek = 'Semana';
+	var Tdayofweek ='Día de la Semana';
+	var Tday ='Día';
+	var TInBedMin ='Total Dormido, mins';
+	var TDeepSleepMin ='Sueño\xA0Profundo, mins';
+	var TLightSleepMin ='Sueño\xA0Ligero, mins';
+	var TAwakeMin ='Despierto, mins';
+	var TDailyDistanceMeter ='Distancia Diaria, metros';
+	var TDailySteps ='Pasos Diarios';
+	var TDailyBurnCalories ='Calorías quemadas Diarias';
+	var TWalkDistance ='Distancia Andando, metros';
+	var TWalkTimeMin = 'Tiempo Andando, minutos';
+	var TWalkBurnCalories ='Calorías quemadas Andando';
+	var TRunDistanceMeter ='Distancia Corriendo, metros';
+	var TRunTimeMin ='Tiempo Corriendo, minutos';
+	var TRunBurnCalories ='Calorías quemadas Corriendo';
+	var TSleepStartOffset ='SleepStartOffset';
+	var TSleepEndOffset ='SleepEndOffset';
 
-var TD0 = 'dimanche';
-var TD1 = 'lundi';
-var TD2 = 'mardi';
-var TD3 = 'mercredi';
-var TD4 = 'jeudi';
-var TD5 = 'vendredi';
-var TD6 = 'samedi';
+	var TSleep = 'Sueño';
+	var TActivity = 'Actividad Diaria';
+	var TDistanceSumM = 'Distancia total Mensual';
+	var TDistanceSumW = 'Distancia total Semanal';
+	var TDistanceAvg = 'Promedio distancia diaria, metros';
+	var TStepsSumM = 'Total pasos mensuales';
+	var TStepsSumW = 'Total pasos semanales';
+	var TStepsAvg = 'Promedio pasos diarios';
+	var TDailyGoals = 'Objetivos Diarios';
+	var TGoalSleep = 'Sueño';
+	var TGoalSteps = 'Pasos';
 
-var TDL = 'SLMMJVS';
+	var TAggregate = 'Agrupar datos por';
+	var TAggregateDay = 'dia';
+	var TAggregateWeek = 'semana';
+	var TAggregateMonth = 'mes';
 
+	var TD0 = 'Domingo';
+	var TD1 = 'Lunes';
+	var TD2 = 'Martes';
+	var TD3 = 'Miércoles';
+	var TD4 = 'Jueves';
+	var TD5 = 'Viernes';
+	var TD6 = 'Sábado';
+
+	var TDL = 'DLMXJVS';
+} else if (lang == "de_DE") {
+	var Tdate='Datum\xA0\xA0\xA0\xA0\xA0';
+	var Tyear='Jahr';
+	var Tyearmonth='Jahr-Monat';
+	var Tmonth='Monat';
+	var Tyearweek = 'Jahr-Woche';
+	var Tweek = 'Woche';
+	var Tdayofweek ='Wochentag';
+	var Tday ='Tag';
+	var TInBedMin ='Summe Schlaf, Minuten';
+	var TDeepSleepMin ='Tiefer\xA0Schlaf, Minuten';
+	var TLightSleepMin ='Leichter\xA0Schlaf, Minuten';
+	var TAwakeMin ='Wach, Minuten';
+	var TDailyDistanceMeter ='Entfernung pro Tag, Meter';
+	var TDailySteps ='Schritte pro Tag';
+	var TDailyBurnCalories ='Verbrannte kcal pro Tag';
+	var TWalkDistance ='Entfernung Gehen, Meter';
+	var TWalkTimeMin = 'Zeit Gehen, Minuten';
+	var TWalkBurnCalories ='Verbrannte kcal, Gehen';
+	var TRunDistanceMeter ='Entfernung Laufen, Meter';
+	var TRunTimeMin ='Zeit Laufen, Minuten';
+	var TRunBurnCalories ='Verbrannte kcal, Laufen';
+	var TSleepStartOffset ='SchlafStartOffset';
+	var TSleepEndOffset ='SchlafEndeOffset';
+
+	var TSleep = 'Schlaf';
+	var TActivity = 'Tagesaktivität';
+	var TDistanceSumM = 'Summe monatliche Entfernung';
+	var TDistanceSumW = 'Summe wöchentliche Entfernung';
+	var TDistanceAvg = 'Durchschnittliche tägliche Entfernung, Meter';
+	var TStepsSumM = 'Summe Schritte pro Monat';
+	var TStepsSumW = 'Summe Schritte pro Woche';
+	var TStepsAvg = 'Durchschnittliche Anzahl von Schritten pro Tag';
+	var TDailyGoals = 'Tagesziele:';
+	var TGoalSleep = 'Schlaf:';
+	var TGoalSteps = 'Schritte:';
+
+	var TAggregate = 'Aufsummierte Daten pro:';
+	var TAggregateDay = 'Tag';
+	var TAggregateWeek = 'Woche';
+	var TAggregateMonth = 'Monat';
+
+	var TASleepTime = 'Einschlafzeit, HH';
+	var TAwakeTime = 'Aufwachzeit, HH';
+
+
+	var TD0 = 'Sonntag';
+	var TD1 = 'Montag';
+	var TD2 = 'Dienstag';
+	var TD3 = 'Mittwoch';
+	var TD4 = 'Donnerstag';
+	var TD5 = 'Freitag';
+	var TD6 = 'Samstag';
+
+	var TDL = 'SMDMDFS';
+} else if (lang == "pt_BR") {
+	var Tdate='Data\xA0\xA0\xA0\xA0\xA0\xA0';
+	var Tyear='Ano';
+	var Tyearmonth='Ano-mês';
+	var Tmonth='Mês';
+	var Tyearweek = 'Ano-semana';
+	var Tweek = 'Semana';
+	var Tdayofweek ='Dia da semana';
+	var Tday ='Dia';
+	var TInBedMin ='Total dormido, mins';
+	var TDeepSleepMin ='Sono\xA0Profundo, mins';
+	var TLightSleepMin ='Sono\xA0Leve, mins';
+	var TAwakeMin ='Acordado, mins';
+	var TDailyDistanceMeter ='Distância diária, meters';
+	var TDailySteps ='Passos diários';
+	var TDailyBurnCalories ='Calorias queimadas diárias';
+	var TWalkDistance ='Distância andada, metros';
+	var TWalkTimeMin = 'Tempo andado, minutos';
+	var TWalkBurnCalories ='Calorias queimadas andando';
+	var TRunDistanceMeter ='Distância correndo, metros';
+	var TRunTimeMin ='Tempo correndo, minutos';
+	var TRunBurnCalories ='Calorias queimadas correndo';
+	var TSleepStartOffset ='SleepStartOffset';
+	var TSleepEndOffset ='SleepEndOffset';
+
+	var TSleep = 'Sono';
+	var TActivity = 'Atividade diária';
+	var TDistanceSumM = 'Distância total mensal';
+	var TDistanceSumW = 'Distância total diária';
+	var TDistanceAvg = 'Distância média diária, metros';
+	var TStepsSumM = 'Total de passos mensais';
+	var TStepsSumW = 'Total de passos semanais';
+	var TStepsAvg = 'Média de passos diário';
+	var TDailyGoals = 'Metas diárias';
+	var TGoalSleep = 'Sono';
+	var TGoalSteps = 'Passos';
+
+	var TAggregate = 'Agregar dados por';
+	var TAggregateDay = 'dia';
+	var TAggregateWeek = 'semana';
+	var TAggregateMonth = 'mês';
+
+	var TD0 = 'Domingo';
+	var TD1 = 'Segunda';
+	var TD2 = 'Terça';
+	var TD3 = 'Quarta';
+	var TD4 = 'Quinta';
+	var TD5 = 'Sexta';
+	var TD6 = 'Sábado';
+
+	var TDL = 'DSTQQSS';
+
+	var TASleepTime = 'Dormiu, HH';
+	var TAwakeTime = 'Acordou, HH';
 }
-
-if (lang == "es_ES") {
-
-var Tdate='Fecha\xA0\xA0\xA0\xA0\xA0';
-var Tyear='Año';
-var Tyearmonth='Año-Mes';
-var Tmonth='Mes';
-var Tyearweek = 'Año-Semana';
-var Tweek = 'Semana';
-var Tdayofweek ='Día de la Semana';
-var Tday ='Día';
-var TInBedMin ='Total Dormido, mins';
-var TDeepSleepMin ='Sueño\xA0Profundo, mins';
-var TLightSleepMin ='Sueño\xA0Ligero, mins';
-var TAwakeMin ='Despierto, mins';
-var TDailyDistanceMeter ='Distancia Diaria, metros';
-var TDailySteps ='Pasos Diarios';
-var TDailyBurnCalories ='Calorías quemadas Diarias';
-var TWalkDistance ='Distancia Andando, metros';
-var TWalkTimeMin = 'Tiempo Andando, minutos';
-var TWalkBurnCalories ='Calorías quemadas Andando';
-var TRunDistanceMeter ='Distancia Corriendo, metros';
-var TRunTimeMin ='Tiempo Corriendo, minutos';
-var TRunBurnCalories ='Calorías quemadas Corriendo';
-var TSleepStartOffset ='SleepStartOffset';
-var TSleepEndOffset ='SleepEndOffset';
-
-var TSleep = 'Sueño';
-var TActivity = 'Actividad Diaria';
-var TDistanceSumM = 'Distancia total Mensual';
-var TDistanceSumW = 'Distancia total Semanal';
-var TDistanceAvg = 'Promedio distancia diaria, metros';
-var TStepsSumM = 'Total pasos mensuales';
-var TStepsSumW = 'Total pasos semanales';
-var TStepsAvg = 'Promedio pasos diarios';
-var TDailyGoals = 'Objetivos Diarios';
-var TGoalSleep = 'Sueño';
-var TGoalSteps = 'Pasos';
-
-var TAggregate = 'Agrupar datos por';
-var TAggregateDay = 'dia';
-var TAggregateWeek = 'semana';
-var TAggregateMonth = 'mes';
-
-var TD0 = 'Domingo';
-var TD1 = 'Lunes';
-var TD2 = 'Martes';
-var TD3 = 'Miércoles';
-var TD4 = 'Jueves';
-var TD5 = 'Viernes';
-var TD6 = 'Sábado';
-
-var TDL = 'DLMXJVS';
-}
-
-if (lang == "de_DE") {
-
-var Tdate='Datum\xA0\xA0\xA0\xA0\xA0';
-var Tyear='Jahr';
-var Tyearmonth='Jahr-Monat';
-var Tmonth='Monat';
-var Tyearweek = 'Jahr-Woche';
-var Tweek = 'Woche';
-var Tdayofweek ='Wochentag';
-var Tday ='Tag';
-var TInBedMin ='Summe Schlaf, Minuten';
-var TDeepSleepMin ='Tiefer\xA0Schlaf, Minuten';
-var TLightSleepMin ='Leichter\xA0Schlaf, Minuten';
-var TAwakeMin ='Wach, Minuten';
-var TDailyDistanceMeter ='Entfernung pro Tag, Meter';
-var TDailySteps ='Schritte pro Tag';
-var TDailyBurnCalories ='Verbrannte kcal pro Tag';
-var TWalkDistance ='Entfernung Gehen, Meter';
-var TWalkTimeMin = 'Zeit Gehen, Minuten';
-var TWalkBurnCalories ='Verbrannte kcal, Gehen';
-var TRunDistanceMeter ='Entfernung Laufen, Meter';
-var TRunTimeMin ='Zeit Laufen, Minuten';
-var TRunBurnCalories ='Verbrannte kcal, Laufen';
-var TSleepStartOffset ='SchlafStartOffset';
-var TSleepEndOffset ='SchlafEndeOffset';
-
-var TSleep = 'Schlaf';
-var TActivity = 'Tagesaktivität';
-var TDistanceSumM = 'Summe monatliche Entfernung';
-var TDistanceSumW = 'Summe wöchentliche Entfernung';
-var TDistanceAvg = 'Durchschnittliche tägliche Entfernung, Meter';
-var TStepsSumM = 'Summe Schritte pro Monat';
-var TStepsSumW = 'Summe Schritte pro Woche';
-var TStepsAvg = 'Durchschnittliche Anzahl von Schritten pro Tag';
-var TDailyGoals = 'Tagesziele:';
-var TGoalSleep = 'Schlaf:';
-var TGoalSteps = 'Schritte:';
-
-var TAggregate = 'Aufsummierte Daten pro:';
-var TAggregateDay = 'Tag';
-var TAggregateWeek = 'Woche';
-var TAggregateMonth = 'Monat';
-
-var TASleepTime = 'Einschlafzeit, HH';
-var TAwakeTime = 'Aufwachzeit, HH';
-
-
-var TD0 = 'Sonntag';
-var TD1 = 'Montag';
-var TD2 = 'Dienstag';
-var TD3 = 'Mittwoch';
-var TD4 = 'Donnerstag';
-var TD5 = 'Freitag';
-var TD6 = 'Samstag';
-
-var TDL = 'SMDMDFS';
-
-}
-
 
 var data = new google.visualization.DataTable();
 

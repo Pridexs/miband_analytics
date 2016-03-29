@@ -11,4 +11,5 @@ var WalkGoal = 8000;
 //fr_FR - French
 //es_ES - Spanish
 //de_DE - German
+//pt_BR - Brazilian Portuguese
 var lang = "";

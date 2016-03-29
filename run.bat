@@ -55,7 +55,7 @@ echo deleting temp files >> log
 del mi.ab
 del mi.zlb
 del mi.tar
-copy /Y apps\com.xiaomi.hm.health\db\origin_db* db\. >>log 
+copy /Y apps\com.xiaomi.hm.health\db\origin_db* db\. >>log
 rd /s/q apps >>log 2>> log_adb
 
 if exist db\origin_db goto Cont
