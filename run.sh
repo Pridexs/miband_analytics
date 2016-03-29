@@ -30,7 +30,7 @@ else
 echo "ok"
 if [ ! -f ./db/origin_db ] || [ $ForceBackupMode == 'Y' ]
  then
-     echo $"Cannot find database files. Non-rooted phone? Attempting backup approach" 2>&1 | tee -a log
+     echo $"Cannot find database files. Non-rooted phone? Attemting backup approach" 2>&1 | tee -a log
      echo $"Press Backup My Data button on device..." 2>&1 | tee -a log
      adb backup -f mi.ab -noapk -noshared com.xiaomi.hm.health
      echo $"unpacking backup file"  2>&1 | tee -a log
