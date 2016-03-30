@@ -11,7 +11,7 @@ brew install sqlite3
 ```
 
 #New versions
-[Original version here](http://forum.xda-developers.com/general/accessories/xiaomi-mi-band-data-extraction-t3019156/post58575745#post58575745)
+[Original version here](http://forum.xda-developers.com/general/accessories/xiaomi-mi-band-data-extraction-t3019156/post58575745#post58575745)  
 [Original russian description here](http://4pda.ru/forum/index.php?showtopic=596501)
 
 # How to use:
@@ -33,7 +33,7 @@ Preparation steps:
 
 You may also think of a great idea of running syncronization automatically and unattended using ADB over Wifi - at least I liked that idea initially.
 I gave that idea more thought and as of now I strongly recommend not to do it - having ADB running over Wifi is a security risk, if you have to use it
-over Wifi, enable it manually, run the sync and disable ADB over Wifi right away. 
+over Wifi, enable it manually, run the sync and disable ADB over Wifi right away.
 
 # For Linux/OSX users:
 1. You would need to to manually install android-sdk for (adb binary), sqlite3 and openssl to uncompress zlib data. Please note that versions of sqlite3

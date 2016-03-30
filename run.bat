@@ -2,6 +2,7 @@
 set SDPath=/sdcard
 set OpenHTML=Y
 set ForceBackupMode=N
+set UseScripts=Y
 set IPAddr=
 set TCPPort=5555
 set ExtractRaw=N
@@ -97,9 +98,16 @@ del .\db\origin_db-journal.bak >>logs\log
 del .\db\mihealth_db.bak >>logs\log
 del .\db\mihealth_db-journal.bak >>logs\log
 
-move extract.js data\ >> logs\log
+if not .%UseScripts%.==.Y. goto Cont4
+python merge.py
+cd data
+python generate_js.py
+cd ..
+
+:Cont4
+if exist data\app_locale.js del data\app_locale.js
+if exist app_locale.js move app_locale.js data\
 
 if not .%OpenHTML%.==.Y. goto End
-if exist data\mi_data.html start mi_data.html
-
+if exist data\mi_data.html start data\mi_data.html
 :End
