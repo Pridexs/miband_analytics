@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0016)http://localhost -->
+<html>
+  <head>
+	<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart','table','controls']}]}"></script>
+	<script type="text/javascript" src="config.js"></script>
+	<script type="text/javascript" src="app_locale.js"></script>
+	<script type="text/javascript" src="locale.js"></script>
+	<script type="text/javascript" src="extract.js"></script>
+	<script type="text/javascript" src="mi_data.js"></script>
+  </head>
+
+  <body>
+    <table style="width: 99%;" >
+      <tr valign="top" style="height: 350px;" >
+        <td style="width: 50%;">
+	          <div id="chart1_div" style="height: 350px"></div>
+        </td>
+        <td style="width: 50%;">
+          <div id="chart2_div" style="height: 350px"></div>
+        </td>
+      </tr>
+    </table>
+    <form> <label id="Goals"> </label>
+    	<span style="margin-right:50px;"><label id="SleepGoals"> </label>
+    		<input type="button" value="-" onclick="SGD();"/>
+    	 	<label id="SleepGoal"> </label>
+    		<input type="button" value="+" onclick="SGI();"/>
+    	</span>
+    	<span style="margin-right:50px;">
+    		<label  id="StepGoals"> </label>
+    		<input type="button" value="-" onclick="WGD();"/>
+    	 	<label id="WalkGoal"> </label>
+    		<input type="button" value="+" onclick="WGI();"/>
+    	</span>
+
+    	<label id="AggregateBy"> </label>
+	<input type="button" id="ByDay" value="day" onclick="AggType = 1; RD();"/>
+    	<input type="button" id="ByWeek" value="week" onclick="AggType = 2; RD();"/>
+    	<input type="button" id="ByMonth" value="month" onclick="AggType = 3; RD();"/>
+    </form>
+    <div id="table_div" style="align: center; "></div>
+  </body>
+</html>

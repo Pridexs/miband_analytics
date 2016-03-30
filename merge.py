@@ -4,7 +4,7 @@
 # is lost.
 #
 # It also makes a backup of the old file if somehow the merge bugs out.
-# It's called extract_old.csv 
+# It's called extract_old.csv
 
 import csv
 import sys
@@ -83,11 +83,11 @@ if (f_cur is not None):
 
     if (not row[0] == last_row[0]):
         writer_new.writerow(last_row)
-    else:
-        writer_new.writerow(row)
+
+    writer_new.writerow(row)
 
     for row in reader_newlyGen:
-        writer.new_writerow(last_row)
+        writer.new_writerow(row)
 
     f_cur.close()
     f_new.close()

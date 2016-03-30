@@ -1,4 +1,7 @@
 *.csv
 extract.js
 log*
+
+# DB
 db/origin*
+db/mihealth_db*
