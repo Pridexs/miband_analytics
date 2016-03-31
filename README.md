@@ -1,24 +1,52 @@
-Extended analytics for data from Xiaomi Mi Band
+# What is this?
+This is a tool to extract data from Xiaomi's MiBand. It was not initially developed by me (you can check the original thread where it came from bellow) but, I am currently involved with a lot of personal data extraction so I am expanding this with my needs and maybe it can fulfill yours too.
 
-![Screenshot](http://i.imgur.com/ALWh4zf.gif)
-![Screenshot](http://i.imgur.com/id5BV3q.gif)
-![Screenshot](http://i.imgur.com/tg1XKO9.gif)
+What I added from the original version:
+1. Scripts to merge files
+  * Xiaomi is not good at keeping their data. At least they have failed me countless times, so with that in mind I added two scripts.
+    1. merge.py
+        This merges two .csv files into one. The newly generated one with any previously generated. I did this because I had files from days that were not stored in my cellphone and if I just ran the original scripts it would completely overwrite any old data. Instead, I pick the old one, copy to a new .csv and bring data back with the new one. Replacing the last day of the previous file with the new one (if the days match).
+    2. generate_js.py
+        This is just for the data visualization tool. It just generates a new extrac.js from a .csv file.
+2. Changed around the shell scripts a little bit
 
-#Mac OS X
-For Mac OS X install fresh sqlite3
-```bash
-brew install sqlite3
-```
+What I plan to do:
+- [ ] Make a data visualization tool for D3.js
+- [ ] Automate the scripts a little bit more.
+- [ ] Add stuff from MiBand 1S (Heart rate, etc)
 
-#New versions
-[Original version here](http://forum.xda-developers.com/general/accessories/xiaomi-mi-band-data-extraction-t3019156/post58575745#post58575745)  
-[Original russian description here](http://4pda.ru/forum/index.php?showtopic=596501)
+I do not have a MiScale yet so I cannot test those features, but I plan to get one soon and maybe do more stuff on that are aswell.
+
+# Requirements
+You cannot use version of MiFit 2.0+ since they use a different db from sqlite.
+
+1. If you do not have a rooted (is that the term?) phone:
+  1. MiFit version 1.7 or less or;
+  2. Altered MiFit version 1.8
+    * In MiFit 1.8 the flag to allow database backup is set to false. That means you cannot retrieve the database files from this version. But, fortunately, there is ways to change that. One of the methods is downloading the apk from a mirror (Lookup apkmirror dot com) decompress the apk and change the flag android:allowBackup to false in the Manifest File. How to do that is out of the scope of this document but it is not that hard.
+2. If you have a phone with rooted phone:
+  1. adb should be able to get the database with no problems.
+
+# Dependencies
+1. Windows
+  * All the binaries inside bin/ folder should work. If adb cannot perform the data extraction, you should download the newest version of android sdk and use their version of adb instead.
+  1. python3
+2. GNU/Linux & Mac
+  1. adb from Android
+  2. sqlite3 version 2.8.3> (Linux versions tend to come with older sqlite versions, those won't work)
+  3. python3
 
 # How to use:
 Preparation steps:
-1. If you plan to use both packages, unpack them both to same directory.
-2. Make sure you have USB drivers for your device properly installed and that your device is accessible by ADB when you connect it through USB
-3. If you use it on windows, extract package has all binaries included, for Linux/OSX see comments below.
+1. Make sure you have USB drivers for your device properly installed and that your device is accessible by ADB when you connect it through USB
+2. Connect your phone through USB and make sure USB debugging setting is enabled on your phone.
+3. Execute `run.bat` - if your phone is rooted, the data would be pulled automatically. If your phone is not rooted you would see backup screen and
+   you need to press "Back up my data" button in the bottom left corner.
+4. Data from your mi band will be saved to extract.csv file and extract.js. If UseScirpts is set to 'Y', the data will automatically be merged with any old data and saved inside ./data/csv/extract.csv and ./data/extract.js will be generated.
+5. HTML reports are using Google Charts framework and Google TOS does not allow storing their scripts offline along with the application, therefore
+   you will need to have working internet access for reports to work. Your data is not being sent to Google, the internet connection is only used to
+   download latest version of Google Charts javascripts.
+
 
 # Checking configuration settings:
 1. Review SDPath parameter value in `run.bat/run.sh`. The program will copy files from Mi app location to folder specified in SDPath before pulling
@@ -47,17 +75,15 @@ over Wifi, enable it manually, run the sync and disable ADB over Wifi right away
 bin\sqlite3 dbfile "select datetime('now','localtime');"
 ```
 
-# Running application:
-1. Connect your phone through USB and make sure USB debugging setting is enabled on your phone.
-2. Execute `run.bat` - if your phone is rooted, the data would be pulled automatically. If your phone is not rooted you would see backup screen and
-   you need to press "Back up my data" button in the bottom left corner.
-3. Data from your mi band will be saved to extract.csv file and extract.js. After extraction is complete, if OpenHTML is set to `Y`, `mi_data.html` will
-   be opened automatically to show charts for your Mi usage.
-4. HTML reports are using Google Charts framework and Google TOS does not allow storing their scripts offline along with the application, therefore
-   you will need to have working internet access for reports to work. Your data is not being sent to Google, the internet connection is only used to
-   download latest version of Google Charts javascripts.
-
 # Configuration and localization:
 `config.js` - Set initial daily goal values; select interface language
 `locale.js` - contains all locale data
 `run.bat/run.js` - OpenHTML defines whether to open web browser upon extract completion
+
+#Original versions
+[Original version here](http://forum.xda-developers.com/general/accessories/xiaomi-mi-band-data-extraction-t3019156/post58575745#post58575745)  
+[Original russian description here](http://4pda.ru/forum/index.php?showtopic=596501)
+
+![Screenshot](http://i.imgur.com/ALWh4zf.gif)
+![Screenshot](http://i.imgur.com/id5BV3q.gif)
+![Screenshot](http://i.imgur.com/tg1XKO9.gif)
