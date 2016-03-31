@@ -1,5 +1,4 @@
 #!/bin/bash
-
 SDPath=/sdcard
 OpenHTML=Y
 ForceBackupMode=Y
