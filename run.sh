@@ -71,7 +71,14 @@ else
             mv ./extract.js ./data/
         fi
 
-        [[ $OpenHTML == 'Y' ]] && xdg-open data/mi_data.html
-
+        if [ $OpenHTML == 'Y' ]
+        then
+            if [ "$(uname)" == "Darwin" ]
+            then
+                open data/mi_data.html        
+            elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+                xdg-open data/mi_data.html
+            fi
+        fi
     fi
 fi
