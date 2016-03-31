@@ -23,6 +23,13 @@ csvCurPathFile  = os.path.join(csvPath, extractFile)
 csvNewPathFile  = os.path.join(csvPath, extractNewFile)
 csvOldPathFile  = os.path.join(csvPath, extractOldFile)
 
+# Create the directories needed if they dont exist
+if (not os.path.exists(dataPath)):
+    os.mkdir(dataPath)
+
+if (not os.path.exists(csvPath)):
+    os.mkdir(csvPath)
+
 # Just to make sure there is no trash from a failed merge
 if (os.path.exists(csvNewPathFile)):
     try:
@@ -31,27 +38,19 @@ if (os.path.exists(csvNewPathFile)):
         print('data/csv/extract_new.csv could not be removed. Is the file in use?')
 
 try:
-    f_newlyGen      = open(extractFile, 'r')
+    f_newlyGen = open(extractFile, 'r')
 except:
     print ('No extract.csv found. Did you run the generation script first?')
     sys.exit()
 
-f_new               = open(csvNewPathFile, 'w')
-
 try:
-    f_cur           = open(csvCurPathFile, 'r')
+    f_cur = open(csvCurPathFile, 'r')
 except:
-    f_cur           = None
-
-# Create the directories needed if they dont exist
-if (not os.path.exists(dataPath)):
-    os.makedir(dataPath)
-
-if (not os.path.exists(csvPath)):
-    os.makedir(csvPath)
+    f_cur = None
 
 # Check if there is a previously generated .csv, if it does, merge the two.
 if (f_cur is not None):
+    f_new = open(csvNewPathFile, 'w')
     f_cur = open(csvCurPathFile, 'r')
     writer_new = csv.writer(f_new, delimiter=',', lineterminator='\n')
     reader_cur = csv.reader(f_cur)
@@ -112,3 +111,6 @@ if (f_cur is not None):
             sys.exit()
 
     os.rename(csvNewPathFile, csvCurPathFile)
+else:
+    # Just move the file
+    os.rename(extractFile, csvCurPathFile)

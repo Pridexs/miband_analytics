@@ -100,9 +100,7 @@ del .\db\mihealth_db-journal.bak >>logs\log
 
 if not .%UseScripts%.==.Y. goto Cont4
 python merge.py
-cd data
 python generate_js.py
-cd ..
 
 :Cont4
 if exist data\app_locale.js del data\app_locale.js

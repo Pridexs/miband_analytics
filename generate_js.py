@@ -3,16 +3,18 @@ import os
 import datetime
 import sys
 
-f_csv = open(os.path.join('csv', 'extract.csv'), 'r')
+f_csv = open(os.path.join('data', 'csv', 'extract.csv'), 'r')
 reader = csv.reader(f_csv)
 
-if (os.path.exists('extract.js')):
+extract_js_path = os.path.join('data', 'extract.js')
+
+if (os.path.exists(extract_js_path)):
     try:
-        os.remove('extract.js')
+        os.remove(extract_js_path)
     except:
         sys.exit('Cannot remove extract.js, is the file in use?')
 
-f_js = open('extract.js', 'w')
+f_js = open(extract_js_path, 'w')
 f_js.write('data.addRows([\n')
 
 row = reader.__next__()
