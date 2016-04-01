@@ -33,7 +33,7 @@ You cannot use version of MiFit 2.0+ since they use a different db from sqlite.
   1. python3
 2. GNU/Linux & Mac
   1. adb from Android
-  2. sqlite3 version 2.8.3> (Linux versions tend to come with older sqlite versions, those won't work)
+  2. sqlite3 version 3.8.3> (Linux versions tend to come with older sqlite versions, those won't work)
   3. python3
 
 # How to use:  
