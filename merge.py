@@ -112,5 +112,6 @@ if (f_cur is not None):
 
     os.rename(csvNewPathFile, csvCurPathFile)
 else:
+    f_newlyGen.close()
     # Just move the file
     os.rename(extractFile, csvCurPathFile)
