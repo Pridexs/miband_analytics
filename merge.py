@@ -80,9 +80,6 @@ if (f_cur is not None):
         if (row[0] >= last_row[0]):
             break
 
-    print(row)
-    print(last_row)
-
     if (not row[0] == last_row[0]):
         writer_new.writerow(last_row)
 
