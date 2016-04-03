@@ -77,8 +77,11 @@ if (f_cur is not None):
     reader_newlyGen.__next__()
     row = []
     for row in reader_newlyGen:
-        if (row[0] < last_row[0]):
-            continue
+        if (row[0] >= last_row[0]):
+            break
+
+    print(row)
+    print(last_row)
 
     if (not row[0] == last_row[0]):
         writer_new.writerow(last_row)
@@ -86,7 +89,7 @@ if (f_cur is not None):
     writer_new.writerow(row)
 
     for row in reader_newlyGen:
-        writer.new_writerow(row)
+        writer_new.writerow(row)
 
     f_cur.close()
     f_new.close()
